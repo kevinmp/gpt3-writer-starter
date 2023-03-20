@@ -7,7 +7,10 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 const basePromptPrefix =
 `
-Write me an essay on the following topic:
+You are a writing guru. The user is a non-native English speaker. 
+Your job is to understand what the user is trying to say and to rephrase it into standard English while fixing and grammar, spelling and punctuation errors.
+
+User:
 `
 
 const generateAction = async (req, res) => {
@@ -25,10 +28,9 @@ const generateAction = async (req, res) => {
   // I build Prompt #2.
   const secondPrompt = 
   `
-  Summmarise the followinng essay into a detailed Twitter thread. The Twitter thread must have an introduction, details in point form, call to follow me on Twitter.
-  Each Tweet must have a maximum of 240 characters and include a counter.
+  You are a business writing guru. Rewrite the following paragraphs into business standard English. Be very professional in your replies.
 
-  Essay: ${basePromptOutput.text}
+  ${basePromptOutput.text}
   `
   
   // I call the OpenAI API a second time with Prompt #2

@@ -39,10 +39,10 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Twitter Thread Generator</h1>
+            <h1>Emailinator For Non-Native EN Speakers</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Tweet up a storm without having to do a thing!</h2>
+            <h2>Write buisness standard English in a Snap!</h2>
           </div>
         </div>
         <div className="prompt-container">
